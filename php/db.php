@@ -1,4 +1,5 @@
 <?php
+$MySql = new Sql();
 Class Sql{
 	private $servername = "localhost";
 	private $username = "root";
