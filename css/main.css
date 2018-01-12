@@ -1,0 +1,39 @@
+/* general */
+body{
+	padding: 5vw;
+}
+
+ul{
+	padding: 0;
+}
+
+/* header */
+.header-container{
+	text-align: center;
+}
+
+.header-container .wrapper{
+	display: inline-block;
+}
+
+/* Main Container */
+
+.main-container{
+	width: 90vw;
+}
+
+.main-container .wrapper{
+	width: 100%;
+	text-align: center;
+}
+
+/* Forms */
+.userForm{
+	display: inline-block;
+    width: 55vw;
+    max-width: 400px;
+}
+
+.userForm .input-wide{
+	width: 100%;
+}
