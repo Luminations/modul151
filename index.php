@@ -43,11 +43,11 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
         <div class="main-container">
             <div class="main wrapper clearfix">
 				<?php if(isset($error) && $error !== ""){echo "<p id='errorMessage'>" . $error . "</p>";} ?>
-                <form action="" id="loginForm" method="POST">
+                <form action="" class="userForm" id="loginForm" method="POST">
 					<label class="formLabel" for="un">Username:</label>
-                    <input  class="formInput"type="text" name="username" id="un">
+                    <input  class="formInput input-wide"type="text" name="username" id="un">
 					<label class="formLabel" for="pw">Password:</label>
-                    <input class="formInput" type="password" name="password" id="pw">
+                    <input class="formInput input-wide" type="password" name="password" id="pw">
 					<input class="formInput" class="formLabel" type="submit" id="submit" name="submit">
 					<span>Don't have an account? <a href="register.php">Sign up</a> here!</span>
                 </form>
