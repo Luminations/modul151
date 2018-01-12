@@ -1,10 +1,6 @@
 <?php
 session_start();
-include("php/db.php");
-if(isset($_POST["username"]) && $_POST["username"] !== "" && isset($_POST["password"]) && $_POST["password"] !== "" && isset($_POST["submit"])){
-	$MySql->connectionOpen();
-	$MySql->login($_POST["username"], $_POST["password"]);
-}
+
 if(isset($_SESSION["login"]) && $_SESSION["login"]){
 	header("Location: main.php");
 }
@@ -30,7 +26,7 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
     <body>
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">Wilkommen tbz.</h1>
+                <h1 class="title">Login</h1>
                 <nav>
                     <ul>
                         <li><a href="#">Cards</a></li>

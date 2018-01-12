@@ -4,7 +4,7 @@ Class Sql{
 	private $servername = "localhost";
 	private $username = "root";
 	private $password = "";
-	private $database = "modul183";
+	private $database = "modul151";
 	private $connection = "";
 
     //open connection
@@ -50,11 +50,11 @@ Class Sql{
 	//If no parameter is given it returns all usable hashing methods on the server.
 	private function getHashMethods($hasingMethod = NULL){
 		$returnValue = "";
-		if($hashingMethod === NULL){
+		if($hasingMethod === NULL){
 			$returnValue = hash_algos();
 		}else{
 			$availableAlgorithms = hash_algos();
-			if(array_search($hashingMethod, $availableAlgorithms)){
+			if(array_search($hasingMethod, $availableAlgorithms)){
 				$returnValue = true;
 			} else {
 				$returnValue = false;
