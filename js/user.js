@@ -13,20 +13,30 @@ var login = function(){
 	$.ajax({
 		type: "POST",
 		url: "php/api.php",
-		data: { "user":  {"action": "login", "username": username, "password": passwordHash} }
+		data: { 
+			"user": {
+				"action": "login",
+				"data": {
+					"username": username,
+					"password": passwordHash					
+				}
+			}
+		}
 	}).done(function( data ){
-		console.log(data);
+		if (data == 1){
+			document.location.href = '/ayy.html';
+		} else {
+			alert("Wrong login information.");
+		}
 	});
-	
-	console.log( username + ", " + passwordHash);
 }
 
 var register = function(){
 	var data = serialize();
 	
 	var username = data[0].value;
-	var password1 = data[1].value);
-	var password2 = data[2].value);
+	var password1 = data[1].value;
+	var password2 = data[2].value;
 	
 	var realPassword = "";
 	if(password1 === password2){
@@ -36,11 +46,29 @@ var register = function(){
 	$.ajax({
 		type: "POST",
 		url: "php/api.php",
-		data: { "user":  {"action": "register", "username": username, "password": realPassword} }
+		data: {
+			"user": {
+				"action": "register",
+				"data": {
+					"username": username,
+					"password": realPassword
+				}
+			}
+		}
 	}).done(function( data ){
-		console.log(data);
+		if (data == 1){
+			document.location.href = '/ayy.html';
+		} else {
+			alert("This username is already taken.");
+		}
 	});
-	
-	console.log( username + ", " + passwordHash);
 }
 
+$("#submit").on("click", function( event ){
+	event.preventDefault();
+	if($("#submit").hasClass("login")){
+		login();
+	} else if($("#submit").hasClass("register")){
+		register();
+	}
+});

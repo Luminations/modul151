@@ -45,7 +45,7 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
                     <input  class="formInput input-wide"type="text" name="username" id="un">
 					<label class="formLabel" for="pw">Password:</label>
                     <input class="formInput input-wide" type="password" name="password" id="pw">
-					<button class="formInput" class="formLabel" type="submit" id="submit" name="submit" onclick="serialize()">Submit</button>
+					<button class="formInput login" class="formLabel" type="submit" id="submit" name="submit">Submit</button>
 					<span>Don't have an account? <a href="register.php">Sign up</a> here!</span>
                 </form>
 

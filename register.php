@@ -42,7 +42,7 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
                     <input class="formInput input-wide" type="password" name="password" id="pw">
 					<label class="formLabel" for="pw2">Repeat password:</label>
                     <input class="formInput input-wide" type="password" name="repeatPassword" id="pw2">
-					<button class="formInput" class="formLabel" type="submit" id="submit" name="submit" onclick="register()">Submit</button>
+					<button class="formInput register" class="formLabel" type="submit" id="submit" name="submit">Submit</button>
 					<span>Already have an Account? <a href="index.php">Log in</a> here!</span>
                 </form>
             </div> <!-- #main -->
