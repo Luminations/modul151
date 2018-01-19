@@ -16,50 +16,52 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
 ?>
 
 <!DOCTYPE html>
-<html class="no-js"> <!--<![endif]-->
+<html> <!--<![endif]-->
 	<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Hoi</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/normalize.min.css">
     </head>
     <body>
-        <div class="header-container">
-            <header class="wrapper clearfix">
-                <h1 class="title">Wilkommen tbz.</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#">Cards</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Ayy</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    <!-- Button to open the modal login form -->
+    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
-        <div class="main-container">
-            <div class="main wrapper clearfix">
-				<?php if(isset($error) && $error !== ""){echo "<p id='errorMessage'>" . $error . "</p>";} ?>
-                <form action="" class="userForm" id="loginForm" method="POST">
-					<label class="formLabel" for="un">Username:</label>
-                    <input  class="formInput input-wide"type="text" name="username" id="un">
-					<label class="formLabel" for="pw">Password:</label>
-                    <input class="formInput input-wide" type="password" name="password" id="pw">
-					<input class="formInput" class="formLabel" type="submit" id="submit" name="submit">
-					<span>Don't have an account? <a href="register.php">Sign up</a> here!</span>
-                </form>
+    <!-- The Modal -->
+    <div id="id01" class="modal" onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">
+        <div>
 
-            </div> <!-- #main -->
-        </div> <!-- #main-container -->
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <img src="https://vignette.wikia.nocookie.net/filthy-frank/images/8/8d/516c32f08e03d.png/revision/latest?cb=20151019010624" alt="Avatar" class="avatar">
+                </div>
 
-        <div class="footer-container">
-            <footer class="wrapper">
-                <h3>© Boetschi, Hamdan, Fraser</h3>
-            </footer>
-        </div>
+                <div class="container">
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+    </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
     </body>
