@@ -10,6 +10,7 @@ if(isset($_POST) && !empty($_POST)){
 			} else if($_POST["user"]["action"] === "register"){
 				$result = $MySql->register($data["username"], $data["password"]);
 			}
+			$MySql->connectionClose();
 			echo $result;
 			break;
 		default:
