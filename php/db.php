@@ -27,6 +27,7 @@ Class Sql{
 			$result = $this->connection->query("SELECT idUser FROM user WHERE Name = '" . $data[0] ."' AND Password = '" . $data[1] . "';");
 		}
 		if(isset($result) && $result->num_rows > 0){
+			session_start();
 			$this->setSession("login", $result->fetch_assoc()["idUser"]);
 			$return = 1;
 		} else {
