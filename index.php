@@ -1,9 +1,6 @@
 <?php
 session_start();
-include("php/db.php");
-if(isset($_POST["username"]) && $_POST["username"] !== "" && isset($_POST["password"]) && $_POST["password"] !== "" && isset($_POST["submit"])){
-	$MySql->login($_POST["username"], $_POST["password"]);
-}
+
 if(isset($_SESSION["login"]) && $_SESSION["login"]){
 	header("Location: main.php");
 }
@@ -29,7 +26,7 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
     <body>
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">Wilkommen tbz.</h1>
+                <h1 class="title">Login</h1>
                 <nav>
                     <ul>
                         <li><a href="#">Cards</a></li>
@@ -48,7 +45,7 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
                     <input  class="formInput input-wide"type="text" name="username" id="un">
 					<label class="formLabel" for="pw">Password:</label>
                     <input class="formInput input-wide" type="password" name="password" id="pw">
-					<input class="formInput" class="formLabel" type="submit" id="submit" name="submit">
+					<button class="formInput login" class="formLabel" type="submit" id="submit" name="submit">Submit</button>
 					<span>Don't have an account? <a href="register.php">Sign up</a> here!</span>
                 </form>
 
@@ -62,5 +59,7 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/simpleHash.js"></script>
+        <script src="js/user.js"></script>
     </body>
 </html>
