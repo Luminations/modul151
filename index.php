@@ -23,7 +23,7 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.min.css">
 </head>
-<body>
+<body class="bgColor">
   <ul>
       <li>
           <a href="#home" onclick="document.getElementById('id01').style.display='block'">Login</a>
