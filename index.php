@@ -32,7 +32,7 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
   <!-- The Modal -->
   <div id="id01" class="modal">
       <!-- Modal Content -->
-      <form class="modal-content animate" action="/action_page.php">
+      <form class="modal-content animate userForm">
           <span onclick="document.getElementById('id01').style.display='none'" class="close"
                 title="Close Modal">&times;</span>
           <div>
@@ -40,12 +40,12 @@ if(isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== ""){
           </div>
           <div>
               <label><b>Username</b></label>
-              <input type="text" class="login-form-field" placeholder="Enter Username" name="username" required>
+              <input type="text" class="login-form-field formInput" placeholder="Enter Username" name="username" required>
               <br>
               <label><b>Password</b></label>
-              <input type="password" class="login-form-field" placeholder="Enter Password" name="password" required>
+              <input type="password" class="login-form-field formInput" placeholder="Enter Password" name="password" required>
               <br>
-              <button type="submit" class="login-form-field">Login</button>
+              <button type="submit" class="login-form-field formInput login" id="submit">Login</button>
           </div>
           <div class="container bottomColor">
               <span>Don't have an <a href="/register.php">account?</a></span>
