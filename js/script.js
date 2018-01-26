@@ -86,3 +86,16 @@ function replaceBodyNotes(data, jsData, counter){
 	result += "</div></div><script src='js/note-action.js'></script>";
 	$(".main").replaceWith(result);
 }
+
+window.onclick = function(event) {
+	makeGreyAreaClickable();
+}
+
+function makeGreyAreaClickable(){
+    // Get the modal
+    var modal = document.getElementById('id01');
+    // When the user clicks anywhere outside of the modal, close it
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

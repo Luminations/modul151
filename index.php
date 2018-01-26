@@ -28,8 +28,9 @@ if (isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== "") {
 </head>
 <body>
 <ul>
-    <li><!-- Button to open the modal login form -->
-        <a href="#home" onclick="document.getElementById('id01').style.display='block'">Login</a></li>
+    <li>
+        <a href="#home" onclick="document.getElementById('id01').style.display='block'">Login</a>
+    </li>
 </ul>
 <!-- The Modal -->
 <div id="id01" class="modal">
@@ -37,24 +38,20 @@ if (isset($_SESSION["ERROR"]) AND $_SESSION["ERROR"] !== "") {
     <form class="modal-content animate" action="/action_page.php">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
               title="Close Modal">&times;</span>
-        <div class="imgcontainer">
-            <img src="resources/pictures/octahedron.png"
-                 alt="Avatar" class="avatar">
+        <div>
+            <img src="resources/pictures/octahedron.png" alt="Avatar"/>
         </div>
-        <div class="container">
+        <div>
             <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-
+            <input type="text" class="login-form-field" placeholder="Enter Username" name="username" required>
+            <br>
             <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <button type="submit">Login</button>
+            <input type="password" class="login-form-field" placeholder="Enter Password" name="password" required>
+            <br>
+            <button type="submit" class="login-form-field">Login</button>
         </div>
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
-                Cancel
-            </button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+        <div class="container bottomColor">
+            <span>Don't have an <a href="/register.php">account?</a></span>
         </div>
     </form>
 </div>
