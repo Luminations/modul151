@@ -24,7 +24,7 @@ var login = function(){
 		}
 	}).done(function( data ){
 		if (data == 1){
-			document.location.href = '/ayy.html';
+			document.location.href = 'index.php';
 		} else {
 			alert("Wrong login information.");
 		}
@@ -57,7 +57,7 @@ var register = function(){
 		}
 	}).done(function( data ){
 		if (data == 1){
-			document.location.href = '/ayy.html';
+			document.location.href = 'ayy.html';
 		} else {
 			alert("This username is already taken.");
 		}
